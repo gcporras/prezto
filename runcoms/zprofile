@@ -72,3 +72,14 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Pyenv 
+#
+
+# Enable shims and autocompletion add to your profile:
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# To use Homebrew's directories rather than ~/.pyenv add to your profile
+export PYENV_ROOT=/usr/local/opt/pyenv
+
